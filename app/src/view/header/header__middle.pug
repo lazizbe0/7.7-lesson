@@ -1,0 +1,17 @@
+.header__midddle
+    .container
+        .header__midddle-inner 
+            nav.nav
+                i.header__menu.far.fa-bars 
+                ul.nav__list
+                    - var list = ["Часы", "Кольца", "Серьги", "Браслеты", "Клатчи", "Цепочки"]
+                        each menu in list
+                            li.nav__item 
+                                a.nav__link(href="#")=menu
+            .header__midddle-social
+                a.header__midddle-like(href="#") 
+                    i.far.fa-heart
+                a.header__midddle-cart(href="#") 
+                    i.far.fa-shopping-cart
+                a.header__midddle-user(href="#") 
+                    i.far.fa-user

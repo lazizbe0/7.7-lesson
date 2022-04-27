@@ -1,0 +1,42 @@
+$wh: #fff;
+$chorniy: #000;
+$lightGredy: #e5e5e5;
+$gray: #e1e1e1;
+$lightBlack: #323232;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+body{
+    font-family: "Montserrat", "sans-serif";
+    background-color: $lightGredy;
+    &.active{
+        overflow: hidden;
+        background: #e5e5e5;
+    }
+}
+li,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none
+}
+.container{
+    @include container();
+}
+.wrapper{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+    &.active{
+        display: block;
+    }
+}

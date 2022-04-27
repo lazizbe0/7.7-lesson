@@ -1,0 +1,35 @@
+$gutters: 30px;
+$gutter-side: $gutters / 2;
+$columns: 12;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+
+@mixin container($padding: $gutter-side){
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: $xl;
+    padding-left: $padding;
+    padding-right: $padding;   
+       
+}
+
+@mixin row($margin: $gutter-side){
+    display: flex;
+    flex-wrap: wrap;
+    @if $margin != 0{
+        margin-left: -$margin;
+        margin-right: -$margin;
+    }
+}
+
+
+@mixin media ($size: $xl){
+    @media(max-width: $size) {
+        @content;
+    }
+}

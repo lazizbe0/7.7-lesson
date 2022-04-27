@@ -1,0 +1,17 @@
+section.leaders
+    .container
+        .leaders__inner
+            h2.leaders__title ЛИдеры продаж
+            .leaders__content 
+                each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+                    .clock-card
+                        span.clock-card__person 50%
+                        span.clock-card__like 
+                            i.far.fa-heart
+                        span.clock-card__card
+                            i.far.fa-shopping-cart
+                        img.clock-card__img(src="./img/clock.webp", alt="clock")
+                        .clock-card__info   
+                            h3.clock-card__title Fantastic Style
+                            p.clock-card__price 9 128 000 UZS 
+       

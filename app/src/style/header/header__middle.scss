@@ -1,0 +1,92 @@
+  .header__menu{
+      font-size: 30px;
+      cursor: pointer;
+      display: none;
+      @media(max-width: 425px) {
+        display: inline-block;
+      }
+  }
+  
+  .header__midddle {
+        margin-bottom: 40px;
+
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            border-top: #C4C4C4 solid 1px;
+            border-bottom: #C4C4C4 solid 1px;
+
+            .nav {
+                display: flex;
+                align-items: center;
+                
+                &__list {
+                    display: flex;
+                    gap: 50px;
+
+                    @media(max-width: 768px) {
+                        & {
+                            gap: 20px;
+                        }
+                    }
+
+                    @media(max-width: 425px) {
+                        & {
+
+                            position: fixed;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            z-index: 100;
+                            flex-direction: column;
+                            padding: 100px 15px;
+                            width: 60%;
+                            align-items: center;
+                            background: #fff;
+                            transform: translateX(101%);
+                            transition: .5s;
+                            &.active{
+                                transform: translateX(0);
+                            }
+                        }
+                        
+                    }
+                }
+
+                &__link {
+
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    display: flex;
+                    align-items: center;
+                    text-transform: capitalize;
+                    color: $lightBlack;
+
+                    &:hover {
+                        color: $chorniy;
+                    }
+                }
+            }
+        }
+
+        &-social {
+            display: flex;
+            gap: 30px;
+
+            & a {
+                color: $chorniy;
+
+                & i {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    color: $lightBlack;
+                }
+            }
+        }
+
+    }
